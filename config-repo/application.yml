@@ -21,3 +21,7 @@ eureka:
     fetch-registry: false
     service-url:
       defalutZone: http://localhost:${server.port}/eureka/
+      
+tempo:
+  test:
+    config: auto-flash
