@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: tempo-registry
+  profiles:
+    active: local
+  cloud:
+    config:
+      server:
+        git:
+#          uri: https://github.com/8652/Tempo-Cloud-Config/
+          search-paths: config-repo
+          username: 8652
+          password: git.comdhqusiqusi
+          repos: https://github.com/8652/Tempo-Cloud-Config.git
+
+server:
+  port: 18000
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defalutZone: http://localhost:${server.port}/eureka/
